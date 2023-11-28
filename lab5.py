@@ -9,6 +9,7 @@ class Sneakers:
         self.quantity = quantity
         self.material = material
         self.numberOfSales = numberOfSales
+    
 
     def __str__(self):
 
@@ -88,7 +89,7 @@ def main():
         print(sneaker)
 
 
-    store.top_sallers()
+    store.top_sellers()
     print("*" * number_of_spaces)
     print("TOP SELLERS: ")
     print("*" * number_of_spaces)
@@ -102,5 +103,7 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+    
 
 

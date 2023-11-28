@@ -29,12 +29,13 @@ class SportShoesStore:
         def sort_by_quantity(self):
             self.inventory = sorted(self.inventory, key = lambda x: x.quantity, reverse = True)
 
-        def top_sallers(self, top_n = 5):
+        def top_sellers(self, top_n = 5):
             self.inventory  = sorted(self.inventory, key = lambda x: x.numberOfSales, reverse = True)[:top_n]
 
 def main():
 
     store = SportShoesStore()
+    number_of_spaces = 100
 
 
     sneaker1 = Sneakers("Nike", 10, "Black", 150, 50, "Leather", 100)
@@ -61,9 +62,8 @@ def main():
     store.add_sneakers(sneaker10)
 
 
-    number_of_spaces = 100
     print("*" * number_of_spaces)
-    print("IINVENTORY BEFORE SORTING: ")
+    print("INVENTORY BEFORE SORTING: ")
     print("*" * number_of_spaces)
 
     for sneaker in store.inventory:
